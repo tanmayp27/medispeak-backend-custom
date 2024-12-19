@@ -2,7 +2,7 @@ class FormField < ApplicationRecord
   belongs_to :page
 
   # Using string enum for better readability
-  enum field_type: {
+  enum :field_type, {
     string: "string",           # Text input
     number: "number",           # Numeric input
     boolean: "boolean",         # Yes/No values

@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Use main development branch of Rails
-gem "rails", github: "rails/rails", branch: "main"
+gem "rails", "~> 8.0"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 # Use postgresql as the database for Active Record
@@ -23,9 +23,9 @@ gem "inline_svg", "~> 1.10.0"
 # Delayed job
 gem "delayed_job_active_record", "~> 4.1"
 # Administrate for admin panel
-gem "administrate", "1.0.0.beta1"
+gem "administrate", github: "thoughtbot/administrate", branch: "main"
 # Open AI ruby
-gem "ruby-openai", "~> 6.2.0"
+gem "ruby-openai", "~> 6.2"
 # Pagy for pagination
 gem "pagy", "~> 6.0"
 # Pundit for authorization
@@ -49,17 +49,17 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 # Use the database-backed adapters for Rails.cache, Active Job, and Action Cable
 gem "solid_cache"
-gem "solid_queue"
-gem "solid_cable"
+gem "solid_queue", "~> 1.1.0"
+gem "solid_cable", "~> 3.0.5"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
-gem "kamal", ">= 2.0.0.rc2", require: false
+gem "kamal", "~> 2.4.0", require: false
 
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
-gem "thruster", require: false
+gem "thruster", "~> 0.1.9", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
