@@ -51,6 +51,11 @@ RUN groupadd --system --gid 1000 rails && \
     chown -R rails:rails db log storage tmp
 USER rails:rails
 
+ARG RAILS_ENV=production
+ENV RAILS_ENV=${RAILS_ENV}
+
+RUN echo "RAILS_ENV is $RAILS_ENV"
+
 # Entrypoint and default command
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 EXPOSE 3000

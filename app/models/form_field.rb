@@ -35,8 +35,8 @@ class FormField < ApplicationRecord
     when "single_select", "multi_select"
       schema[:enum] = enum_options if enum_options.present?
     when "number"
-      schema[:minimum] = minimum if minimum.present?
-      schema[:maximum] = maximum if maximum.present?
+      schema[:minimum] = minimum.to_f if minimum.present?
+      schema[:maximum] = maximum.to_f if maximum.present?
     end
 
     schema.compact

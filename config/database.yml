@@ -80,12 +80,15 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+
 production:
   primary: &primary_production
     <<: *default
     database: medispeak_backend_production
-    username: medispeak_backend
-    password: <%= ENV["MEDISPEAK_BACKEND_DATABASE_PASSWORD"] %>
+    username: <%= ENV["DB_USERNAME"] %>
+    password: <%= ENV["DB_PASSWORD"] %>
+    host: <%= ENV["DB_HOST"] %>
+    port: <%= ENV.fetch("DB_PORT", 5432) %>
   cache:
     <<: *primary_production
     database: medispeak_backend_production_cache

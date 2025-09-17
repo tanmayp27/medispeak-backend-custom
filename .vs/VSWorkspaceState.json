@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\views",
+    "\\app\\views\\dashboard",
+    "\\app\\views\\devise",
+    "\\app\\views\\home",
+    "\\app\\views\\pages",
+    "\\app\\views\\transcriptions",
+    "\\config",
+    "\\db"
+  ],
+  "PreviewInSolutionExplorer": false
+}

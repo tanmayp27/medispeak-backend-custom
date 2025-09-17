@@ -1,6 +1,7 @@
-require "active_support/core_ext/integer/time"
+﻿require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -24,11 +25,13 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = ENV.fetch("STORAGE_SERVICE", "local")
 
+  Rails.application.routes.default_url_options[:host] = ENV.fetch("APP_HOST", "http://localhost:3000")
+
   # Assume all access to the app is happening through a SSL-terminating reverse proxy.
-  config.assume_ssl = true
+  config.assume_ssl = false
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
+  config.force_ssl = false
 
   # Skip http-to-https redirect for the default health check endpoint.
   # config.ssl_options = { redirect: { exclude: ->(request) { request.path == "/up" } } }
@@ -88,4 +91,9 @@ Rails.application.configure do
   #
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+
+   # ✅ Allow local access
+  config.hosts << "localhost"
+  config.hosts << "127.0.0.1"
+  config.hosts << "0.0.0.0"
 end
