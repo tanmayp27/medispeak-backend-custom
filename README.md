@@ -2,7 +2,7 @@
 
 Medispeak: Transforming Patient-Doctor Dialogues Worldwide!
 
-This is the backend API for Medispeak, a tool that provides seamless transcriptions and effortless EMR integration. Our goal is to streamline patient-doctor interactions and automate form filling processes.
+This is a custom variant of the backend API for Medispeak, a tool that provides seamless transcriptions and effortless EMR integration. Our goal is to streamline patient-doctor interactions and automate form filling processes. The changes made are done to ensure compatibility with the docker version of Bahmni- Standard. This was made as an internship project at IPLit Solution, intended to be seperate from the main repository to avoid conflicts. Any subsequent replications or additions to this repository can be made freely without disrupting the original.
 
 ## Features
 
